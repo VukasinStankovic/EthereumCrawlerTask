@@ -4,7 +4,6 @@ This project requires Node.js and NPM to be installed on your machine. Please ma
 ### Installation
 To install the project dependencies, navigate to the project directory and run the following command:
 
-Copy code
 ```
 npm install
 ```
