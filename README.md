@@ -9,6 +9,15 @@ npm install
 ```
 This will download and install all the necessary packages required for the project.
 
+Now create `.env` file in root project directory, and paste following code:
+
+```
+ALCHEMY_API_KEY = ENTER_YOUR_API_KEY
+```
+
+Now replace `ENTER_YOUR_API_KEY` with your Alchemy API key.
+
+
 ### Running the Application
 To run the application, navigate to the project directory and run the following command:
 ```
