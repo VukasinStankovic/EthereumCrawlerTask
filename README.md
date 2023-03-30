@@ -16,4 +16,10 @@ node app.js
 ```
 This will start the server and the application will be accessible at `localhost:8000`. Open your web browser and type in `localhost:8000` to access the application.
 
+If you want to change port you can do it in  file `app.js`
+
+```
+const port = 8000;
+```
+
 That's all you need to do to set up and run this project.
