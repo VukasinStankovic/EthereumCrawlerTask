@@ -149,11 +149,7 @@
             <div class="row d-flex flex-column justify-content-center mx-5">
                 <div class="col">
                     <h2 class="text-primary">Transactions data</h2>
-                    <table
-                        id="example"
-                        class="table table-striped"
-                        style="width: 100%"
-                    >
+                    <table id="example" class="table table-striped">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -188,8 +184,6 @@
                     <p id="example3" class="fs-4"></p>
                 </div>
             </div>
-
-            <div class="row"></div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -240,13 +234,15 @@
                         .then((data) => {
                             const tableRows = data.map(
                                 (transfer, index) =>
-                                    `<tr><td>${index + 1}</td><td>${
-                                        transfer.value
-                                    }</td><td>${transfer.assetType}</td><td>${
-                                        transfer.txHash
-                                    }</td><td>${transfer.sender}</td><td>${
-                                        transfer.recipient
-                                    }</td><td>${transfer.blockNumber}</td></tr>`
+                                    `<tr>
+                                        <td>${index + 1}</td>
+                                        <td>${transfer.value}</td>
+                                        <td>${transfer.assetType}</td>
+                                        <td>${transfer.txHash}</td>
+                                        <td>${transfer.sender}</td>
+                                        <td>${transfer.recipient}</td>
+                                        <td>${transfer.blockNumber}</td>
+                                    </tr>`
                             );
                             if (exampleTable) {
                                 exampleTable.destroy();

@@ -103,7 +103,6 @@ app.get("/ercByDate", async (req, res) => {
             balance,
             symbol,
         };
-        console.log(response);
         res.json(response);
     } catch (error) {
         console.error(error);
