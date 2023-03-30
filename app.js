@@ -4,11 +4,9 @@ import cors from "cors";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import Web3 from "web3";
+import dotenv from 'dotenv';
 
-// Create a new instance of the web3.js library
-const web3 = new Web3(
-    "https://eth-mainnet.alchemyapi.io/v2/C3hB2fbm0Ra3wIqOxr2ujmK8iUCH1WaH"
-);
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -16,8 +14,14 @@ app.use(cors());
 const port = 8000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
 
+const apiKey = process.env.ALCHEMY_API_KEY;
+
+// Create a new instance of the web3.js library
+const web3 = new Web3(
+    `https://eth-mainnet.alchemyapi.io/v2/${apiKey}`
+);
 const config = {
-    apiKey: "C3hB2fbm0Ra3wIqOxr2ujmK8iUCH1WaH",
+    apiKey: apiKey,
     network: Network.ETH_MAINNET,
 };
 const alchemy = new Alchemy(config);
@@ -30,7 +34,6 @@ app.get("/", (req, res) => {
     res.sendFile("index.html", { root: __dirname });
 });
 
-// Handle the form submission for transfers
 app.get("/transfers", async (req, res) => {
     try {
         const currentBlockNumber = await web3.eth.getBlockNumber();
