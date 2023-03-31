@@ -25,8 +25,6 @@ node app.js
 ```
 This will start the server and the application will be accessible at `localhost:8000`. Open your web browser and type in `localhost:8000` to access the application.
 
-**Port** and **API key** can be changed in `app.js` file
-
-Page should look like this:
+Web page should look like this:
 
 ![EthereumTransactionCrawler page](https://user-images.githubusercontent.com/89335245/229075917-8de72caf-c6d6-4528-a5b2-ee88b5cfffe9.png)
