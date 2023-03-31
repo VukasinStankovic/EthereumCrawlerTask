@@ -27,4 +27,6 @@ This will start the server and the application will be accessible at `localhost:
 
 **Port** and **API key** can be changed in `app.js` file
 
-That's all you need to do to set up and run this project.
+Page should look like this:
+
+![EthereumTransactionCrawler page](https://user-images.githubusercontent.com/89335245/229075917-8de72caf-c6d6-4528-a5b2-ee88b5cfffe9.png)
